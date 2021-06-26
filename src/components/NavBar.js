@@ -15,7 +15,7 @@ function NavBar() {
         <Text style={styles.text}>Home</Text>
       </TouchableOpacity>
       <TouchableOpacity
-        onPress={() => RootNavigation.navigate('Gl')}
+        onPress={() => RootNavigation.push('Gl', { gl: 'Blue' })}
         style={styles.fabButton}>
         <IconAnt name="user" size={18} color="#ff3e00" />
         <Text style={styles.text}>GL</Text>

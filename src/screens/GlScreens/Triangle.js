@@ -8,11 +8,8 @@ const shaders = Shaders.create({
   helloBlue: {
     // uniforms are variables from JS. We pipe blue uniform into blue output color
     frag: GLSL`
-precision highp float;
-varying vec2 uv;
-uniform float blue;
-void main() {
-  gl_FragColor = vec4(uv.x, uv.y, blue, 1.0);
+void main () {
+  gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0); // red
 }
 `,
   },
@@ -20,7 +17,7 @@ void main() {
 
 // We can make a <HelloBlue blue={0.5} /> that will render the concrete <Node/>
 export function HelloBlue({ blue }) {
-  return <Node shader={shaders.helloBlue} uniforms={{ blue }} />
+  return <Node shader={shaders.helloBlue} />
 }
 
 // Our example will pass the slider value to HelloBlue

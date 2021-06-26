@@ -17,6 +17,7 @@
 		7A4362BC2686353900B05272 /* EXGL_CPP.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4362BB2686353900B05272 /* EXGL_CPP.xcframework */; };
 		7A4363542686375500B05272 /* UMReactNativeAdapter.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4363532686375400B05272 /* UMReactNativeAdapter.xcframework */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		DCF5FCE624E6C948DA6DEFC1 /* libPods-glrn.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6E64F250D33963541A52B2 /* libPods-glrn.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 				7A4362BC2686353900B05272 /* EXGL_CPP.xcframework in Frameworks */,
 				7A4362B8268634F500B05272 /* EXGL.xcframework in Frameworks */,
 				7A4362B42686347D00B05272 /* EXFileSystem.xcframework in Frameworks */,
+				DCF5FCE624E6C948DA6DEFC1 /* libPods-glrn.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

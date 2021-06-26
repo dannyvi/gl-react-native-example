@@ -1,19 +1,27 @@
 import React, { useEffect } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import { Button } from 'react-native-elements'
 
 import { connect } from '../utils/connect'
 import Page from '../components/Page'
+import * as RootNavigation from '../navigator/RootNavigation'
 
 function ListView({ home }) {
-  const list = home?.data || []
-  console.log('hi', home)
+  const list = ['Blue', 'Sdf', 'Tunnel', 'Triangle']
   return (
     <View style={styles.listContainer}>
-      <Text style={styles.text}>Here goes list items</Text>
       {list.map(x => (
-        <Text style={styles.text} key={x.id}>
-          {x.name}
-        </Text>
+        <Button
+          titleStyle={styles.buttonTitle}
+          title={x}
+          buttonStyle={styles.button}
+          containerStyle={styles.buttonContainer}
+          key={x}
+          onPress={() => {
+            console.log('pushed', x)
+            RootNavigation.push('Gl', { gl: x })
+          }}
+        />
       ))}
     </View>
   )
@@ -23,9 +31,6 @@ function HomeScreen({ home, dispatch }) {
   useEffect(() => {
     dispatch({
       type: 'home/currentUser',
-    })
-    dispatch({
-      type: 'home/showList',
     })
   }, [dispatch])
 
@@ -37,9 +42,15 @@ function HomeScreen({ home, dispatch }) {
 }
 
 const styles = StyleSheet.create({
-  text: {
-    color: 'lightyellow',
-    padding: 2,
+  button: {
+    backgroundColor: '#2a1265',
+    // padding: 20,
+  },
+  buttonTitle: {
+    color: '#ff0',
+  },
+  buttonContainer: {
+    margin: 5,
   },
   listContainer: {
     backgroundColor: '#205d40',
