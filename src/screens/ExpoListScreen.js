@@ -5,10 +5,10 @@ import { Button } from 'react-native-elements'
 import { connect } from '../utils/connect'
 import Page from '../components/Page'
 import * as RootNavigation from '../navigator/RootNavigation'
-import { GLExamples } from './GlScreens'
+import { ExpoExamples } from './ExpoScreens'
 
 function ListView({ home }) {
-  const list = Object.keys(GLExamples)
+  const list = Object.keys(ExpoExamples)
   return (
     <View style={styles.listContainer}>
       {list.map(x => (
@@ -20,7 +20,7 @@ function ListView({ home }) {
           key={x}
           onPress={() => {
             console.log('pushed', x)
-            RootNavigation.push('Gl', { gl: x })
+            RootNavigation.push('Expo', { gl: x })
           }}
         />
       ))}
@@ -28,15 +28,9 @@ function ListView({ home }) {
   )
 }
 
-function HomeScreen({ home, dispatch }) {
-  useEffect(() => {
-    dispatch({
-      type: 'home/currentUser',
-    })
-  }, [dispatch])
-
+function ExpoScreen({ home, dispatch }) {
   return (
-    <Page title="Home">
+    <Page title="Three">
       <ListView home={home} />
     </Page>
   )
@@ -65,4 +59,4 @@ const styles = StyleSheet.create({
 export default connect(({ home, loading }) => ({
   home,
   dataLoading: loading.effects['home/showList'],
-}))(HomeScreen)
+}))(ExpoScreen)

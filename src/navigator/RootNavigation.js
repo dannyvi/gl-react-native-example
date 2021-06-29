@@ -15,9 +15,7 @@ export function navigate(name, params) {
 
 export function push(name, params) {
   if (isReadyRef.current && navigationRef.current) {
-    console.log('pushing ')
     navigationRef.current?.dispatch(StackActions.push(name, params))
-    console.log('finished')
   } else {
     console.log('not ready')
   }

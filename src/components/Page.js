@@ -19,6 +19,6 @@ export default function Page({ title, children }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'blueviolet',
+    backgroundColor: '#402883',
   },
 })

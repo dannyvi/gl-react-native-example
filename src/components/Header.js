@@ -31,7 +31,6 @@ const styles = StyleSheet.create({
     height: 80,
     paddingTop: 30,
     flexDirection: 'row',
-    // textAlignVertical: 'center',
   },
   back: {
     flex: 1,
@@ -42,7 +41,6 @@ const styles = StyleSheet.create({
     flex: 5,
     alignItems: 'center',
     justifyContent: 'center',
-    // textAlignVertical: 'center',
   },
   text: {
     color: '#fff',

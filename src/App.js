@@ -4,6 +4,8 @@ import dva from './utils/dva'
 import { Provider } from 'react-redux'
 import MainStackNavigator from './navigator/AppNavigator'
 
+// require('./Three');
+
 const models = indexModel
 
 const dvaApp: any = dva.createApp({
